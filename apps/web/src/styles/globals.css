@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+@plugin 'tailwindcss-animate';
+
+html {
+  cursor: url('/cursor.png'), auto;
+}
+
+a,
+button,
+input,
+textarea,
+.cursor-pointer {
+  cursor: url('/cursor-pointer.png'), auto;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+#app {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+@font-face {
+  font-family: 'Golondrina Europea';
+  src: url('/fonts/Golondrina.otf');
+}
+
+@theme {
+  /* Fonts */
+  --font-golondrina: 'Golondrina Europea', monospace;
+
+  /* Colors */
+  --color-background: hsl(0 0% 3.9%);
+  --color-foreground: hsl(0 0% 98%);
+  --color-card: hsl(0 0% 3.9%);
+  --color-card-foreground: hsl(0 0% 98%);
+  --color-popover: hsl(0 0% 3.9%);
+  --color-popover-foreground: hsl(0 0% 98%);
+  --color-primary: hsl(0 0% 98%);
+  --color-primary-foreground: hsl(0 0% 9%);
+  --color-secondary: hsl(0 0% 14.9%);
+  --color-secondary-foreground: hsl(0 0% 98%);
+  --color-muted: hsl(0 0% 14.9%);
+  --color-muted-foreground: hsl(0 0% 63.9%);
+  --color-accent: hsl(0 0% 14.9%);
+  --color-accent-foreground: hsl(0 0% 98%);
+  --color-destructive: hsl(0 62.8% 30.6%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+
+  --radius: 8px;
+
+  /* Borders */
+  --color-border: hsl(0 0% 14.9%);
+
+  /* Shadows */
+  --input: hsl(0 0% 14.9%);
+  --color-ring: hsl(0 0% 83.1%);
+
+  /* Charts */
+  --color-chart-1: hsl(220 70% 50%);
+  --color-chart-2: hsl(160 60% 45%);
+  --color-chart-3: hsl(30 80% 55%);
+  --color-chart-4: hsl(280 65% 60%);
+  --color-chart-5: hsl(340 75% 55%);
+
+  /* Border Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

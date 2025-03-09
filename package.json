@@ -1,0 +1,30 @@
+{
+	"name": "turbo-starter",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"format": "prettier . --write --cache",
+		"prepare": "husky",
+		"commitlint": "commitlint --edit"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"prettier": "^3.2.5",
+		"turbo": "^2.3.1",
+		"typescript": "5.6.3"
+	},
+	"lint-staged": {
+		"**/*.{ts,tsx,json,js,jsx,cjs,mjs}": [
+			"prettier --write \"**/*.{ts,tsx,json,js,jsx,cjs,mjs}\" --cache"
+		]
+	},
+	"packageManager": "pnpm@8.15.6",
+	"engines": {
+		"node": ">=18"
+	}
+}
